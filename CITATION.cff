@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite this release."
+type: software
+title: "Sine-wave Hip Implant FEA"
+version: "1.0.0"
+license: MIT
+authors:
+  - family-names: Lin
+    given-names: Churun
+    affiliation: University College London
+    orcid: "https://orcid.org/0009-0004-2145-7170"
+abstract: "Abaqus ODB post-processing scripts for implant expansion, contact pressure and sliding, local implant-bone distances, Gruen-zone stress ratios, and initial bone resorption."
