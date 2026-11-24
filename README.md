@@ -62,7 +62,7 @@ Uses unaveraged integration-point von Mises stress and undeformed element volume
 **5. Initial bone resorption, s = 0.35 only**
 
 ```sh
-abaqus python 05_Bone_Resorption_Continuous.py --reference intact.odb --implant implanted.odb --reference-instance CORTICAL --implant-instance CORTICAL --output results/resorption
+abaqus python 05_Bone_Resorption_Cloudmap.py --reference intact.odb --implant implanted.odb --reference-instance CORTICAL --implant-instance CORTICAL --output results/resorption
 ```
 
 Uses the local intact-bone stimulus, B = 1 and density = 1760 kg/m³. Only the negative rate is retained, in **kg m⁻³ ctu⁻¹**; no iterative remodelling is performed. Open `results/resorption/implanted_RESORP_S035.odb` in Abaqus/CAE and select `RESORP_S035` to view the result. The filename is based on the implanted ODB's name.
@@ -75,7 +75,7 @@ abaqus python 06_resorption_summary.py --odb results/resorption/implanted_RESORP
 
 Reports the volume-weighted mean rate and potential resorption-region volume fraction (%). Both denominators include zero-rate elements. This fraction describes regions predicted to resorb initially, not the amount of bone lost.
 
-Scripts 01–05 use the last completed static step by default; add `--step STEP_NAME` to select another. Inputs are opened read-only. Script 05 refuses to overwrite an existing result ODB; use another output folder for a repeat run. JSON output files are replaced when the same output filename is used.
+Scripts 01–05 use the last step by default, which must be a completed static step; add `--step STEP_NAME` to select another completed static step. Inputs are opened read-only. Script 05 refuses to overwrite an existing result ODB; use another output folder for a repeat run. JSON output files are replaced when the same output filename is used.
 
 ## Validation
 
