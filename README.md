@@ -1,7 +1,6 @@
 # Sine-wave Hip Implant FEA
 
-Basic ODB post-processing for implant expansion, interface motion, cortical stress and initial bone resorption. **All six scripts read ODB files directly.** No previously exported NPZ, pairing JSON or local analysis files are required.
-
+Basic ODB post-processing for implant expansion, interface motion, cortical stress and initial bone resorption. 
 ## Requirements
 
 Use **Abaqus 2024 Python** (Python 3.10 and its bundled NumPy), or a compatible Python 3 Abaqus version. ODBs must open in that Abaqus version. Run the commands below from **Abaqus Command**, with this repository as the working folder. Standard Python alone does not provide `odbAccess`.
