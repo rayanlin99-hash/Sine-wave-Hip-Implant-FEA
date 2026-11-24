@@ -225,7 +225,7 @@ def main():
     parser.add_argument('--implant-surface', default='MIDDLE')
     parser.add_argument('--bone-surface', default='MIDDLE')
     parser.add_argument('--heights', nargs='+', type=float, default=[40.0, 70.0])
-    parser.add_argument('--step', help='Default: last completed static step')
+    parser.add_argument('--step', help='Default: last step; must be a completed static step')
     parser.add_argument('--output', required=True)
     args = parser.parse_args()
     if not np.isfinite(args.heights).all() or len(set(args.heights)) != len(args.heights):
